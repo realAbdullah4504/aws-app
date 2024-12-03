@@ -237,7 +237,7 @@ def trivia_calculate_scores(event, _):
                 Key={"gameId": game_id, "connectionId": connection_id},
                 AttributeUpdates={"score": {'Value': score, "Action": "PUT"}}
             )
-
+# ok
         players.append({
             "connectionId" : connection_id,
             "playerName" : player_name,
