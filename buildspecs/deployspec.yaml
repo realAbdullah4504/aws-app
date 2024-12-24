@@ -7,6 +7,8 @@ phases:
       python: 3.12
     commands:
       - echo "Install phase"
+      - pwd
+      - ls -al
   build:
     commands:
       - sam build
@@ -22,8 +24,8 @@ phases:
 
 cache:
   paths:
-    - front-end-react/node_modules/**/*
-    - front-end-react/build/**/*
+    - ./front-end-react/node_modules/**/*
+    - ./front-end-react/build/**/*
     - /root/.npm/**/*
   key: 
     files:
