@@ -9,6 +9,7 @@ phases:
       - pyenv global 3.7.10
   build:
     commands:
+      - codebuild-breakpoint
       - sam build
       - sam deploy --no-fail-on-empty-changeset
       - cd front-end-react
