@@ -14,6 +14,7 @@ phases:
       - export WS_URL=$(aws cloudformation describe-stacks --stack-name trivia-app --query 'Stacks[0].Outputs[?OutputKey==`TriviaWebSocketApi`].OutputValue' --output text)      
       - echo "WS_URL=$WS_URL"
       - cd front-end-react
+      - codebuild-breakpoint
       - npm ci
       - echo "REACT_APP_WS_URL=$WS_URL" > .env
       - npm run build
@@ -22,6 +23,7 @@ phases:
 cache:
   paths:
     - front-end-react/node_modules/**/*
+    - front-end-react/build/**/*
     - /root/.npm/**/*
   key: 
     files:
