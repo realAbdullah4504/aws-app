@@ -167,7 +167,7 @@ function GameOver(props) {
 
 class App extends React.Component {
   ws = new WebSocket(WebsocketEndpoint);
-
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -196,7 +196,7 @@ class App extends React.Component {
     this.ws.send(message);
     this.setState({currentStep: TRIVIA_STEP.STEP_QUESTIONS});
   }
-
+  
   answer(questionId, answer) {
     var message = JSON.stringify({
       "action":"answer",
@@ -208,6 +208,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    console.log(WebsocketEndpoint);
       this.ws.onopen = () => {
         this.setState({connected: true});
       }
@@ -219,10 +220,10 @@ class App extends React.Component {
           case "gamecreated":
             this.setState({gameId: message.gameId});
             break;
-          case "playerlist":
-            this.setState({playerList: message.players.splice(0)});
-            break;
-          case "question":
+            case "playerlist":
+              this.setState({playerList: message.players.splice(0)});
+              break;
+              case "question":
             this.setState({question: message.question})
             break;
           case "gameover":
