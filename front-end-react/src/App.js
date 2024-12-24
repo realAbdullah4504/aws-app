@@ -18,7 +18,7 @@ function GetStarted(props) {
 
   return (<Card>
     <Card.Body>
-      <Card.Title>Get Started</Card.Title>
+      <Card.Title>Start the Game</Card.Title>
       <Card.Text>
         Click the button below to start a new game.
       </Card.Text>
@@ -208,7 +208,6 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    console.log(WebsocketEndpoint);
       this.ws.onopen = () => {
         this.setState({connected: true});
       }
