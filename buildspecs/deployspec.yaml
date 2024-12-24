@@ -7,10 +7,6 @@ phases:
       python: 3.12
     commands:
       - echo "Install phase"
-  pre_build:
-    commands:
-      - cd front-end-react
-      - if [ ! -f package-lock.json ]; then echo "package-lock.json not found"; exit 1; fi
   build:
     commands:
       - sam build
