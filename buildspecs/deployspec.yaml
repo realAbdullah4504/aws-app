@@ -1,12 +1,12 @@
-
 version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      nodejs: 16
+      python : 3.12
     commands:
       - echo "Install phase"
-      - pyenv install -s 3.7.10
-      - pyenv global 3.7.10
   build:
     commands:
       - codebuild-breakpoint
