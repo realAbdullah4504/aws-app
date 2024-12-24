@@ -12,6 +12,7 @@ phases:
       - codebuild-breakpoint
       - sam build
       - sam deploy --no-fail-on-empty-changeset
+      - export WS_URL=$(aws cloudformation describe-stacks --stack-name trivia-app --query 'Stacks[0].Outputs[?OutputKey==`WebSocketURL`].OutputValue' --output text)      
       - cd front-end-react
       - npm install
       - npm run build

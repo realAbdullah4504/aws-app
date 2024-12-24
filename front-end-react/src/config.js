@@ -1,3 +1,3 @@
 module.exports = {
-  WebsocketEndpoint: 'wss://me2t0ensf4.execute-api.ap-south-1.amazonaws.com/Prod'
+  WebsocketEndpoint: process.env.WS_URL || 'ws://localhost:8080',
 };

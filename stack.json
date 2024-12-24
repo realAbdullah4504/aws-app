@@ -1,0 +1,31 @@
+{
+    "Stacks": [
+        {
+            "StackId": "arn:aws:cloudformation:ap-south-1:588738579221:stack/trivia-app/cc187b10-c1e6-11ef-8ad4-0224e0f27f87",
+            "StackName": "trivia-app",
+            "ChangeSetId": "arn:aws:cloudformation:ap-south-1:588738579221:changeSet/samcli-deploy1735038248/1cfd1ce5-12c9-4651-a3fa-ccbcf2a6ee72",
+            "Description": "Trivia Game",
+            "CreationTime": "2024-12-24T11:04:08.360000+00:00",
+            "LastUpdatedTime": "2024-12-24T11:04:18.837000+00:00",
+            "RollbackConfiguration": {},
+            "StackStatus": "CREATE_COMPLETE",
+            "DisableRollback": false,
+            "NotificationARNs": [],
+            "Capabilities": [
+                "CAPABILITY_IAM"
+            ],
+            "Outputs": [
+                {
+                    "OutputKey": "TriviaWebSocketApi",
+                    "OutputValue": "wss://4i7sjwk3li.execute-api.ap-south-1.amazonaws.com/Prod",
+                    "Description": "API Gateway websockets endpoint"
+                }
+            ],
+            "Tags": [],
+            "EnableTerminationProtection": false,
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            }
+        }
+    ]
+}
